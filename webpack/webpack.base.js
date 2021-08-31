@@ -3,7 +3,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 //所有的基础配置项
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: [
+      '.js', '.jsx', '.ts', '.tsx',
+      '.less'
+    ],
     alias: {
       '@src': path.join(__dirname, '../', 'app/render'),
     },
@@ -16,6 +19,15 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.less$/i,
+        use: [
+          // compiles Less to CSS
+          "style-loader",
+          "css-loader",
+          "less-loader",
+        ],
       },
     ],
   },

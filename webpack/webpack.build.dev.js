@@ -6,8 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const devConfig = {
   mode: 'development',
   entry: {
-    //   对应渲染进程的 app.jsx 入口文件
-    index: path.resolve(__dirname, '../app/render/app.jsx'),
+    //   对应渲染进程的 App.jsx 入口文件
+    index: path.resolve(__dirname, '../app/render/App.jsx'),
   },
   output: {
     filename: '[name].[hash].js',//生成不同文件的hash文件,避免文件名冲突
