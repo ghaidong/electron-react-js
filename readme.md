@@ -1,7 +1,9 @@
 # dev 模式
+npm install
 npm run render
 
 # electron 模式
+npm install
 npm run build
 npm run main
  

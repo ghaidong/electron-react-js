@@ -2,6 +2,7 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const devConfig = {
   mode: 'development',
@@ -26,6 +27,7 @@ const devConfig = {
     hot: true,
   },
   plugins: [
+    new CleanWebpackPlugin.CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       //   以此文件为模版，自动生成 Html
       template: path.resolve(__dirname, '../app/render/index.html'),

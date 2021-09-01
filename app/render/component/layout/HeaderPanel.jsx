@@ -6,7 +6,7 @@ class HeaderPanel extends Component {
       <div className="flex-row header-panel">
         <div className="site-name">EMOP 控制台</div>
         <div className="flex-item"></div>
-        <div className="user-name">{this.props.username}</div>
+        <div className="user-name">haidong</div>
       </div >
     )
   }

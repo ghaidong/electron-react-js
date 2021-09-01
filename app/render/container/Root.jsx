@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
 import HeaderPanel from '../component/layout/HeaderPanel'
 import FooterPanel from '../component/layout/FooterPanel'
+import MainMenu from './menuLeft/MainMenu';
 
 export default class Root extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
   }
   render() {
-    // return <div>root</div>
     return (
       <React.Fragment>
         <HeaderPanel />
         <div className="flex-row middle-content">
+          <div className="flex-item-auto flex-column left-panel">
+            <MainMenu key="leftMenu" />
+          </div>
           <div className="flex-item flex-column">
             <div className="flex-item-auto">
               title
@@ -19,9 +22,9 @@ export default class Root extends Component {
             <div className="flex-item-scroll ">
               content
             </div>
-            <FooterPanel />
           </div>
         </div>
+        <FooterPanel />
       </React.Fragment>
     )
   }

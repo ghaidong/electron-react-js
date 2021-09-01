@@ -1,5 +1,5 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 //所有的基础配置项
 module.exports = {
   resolve: {
@@ -30,6 +30,5 @@ module.exports = {
         ],
       },
     ],
-  },
-  // plugins: [new CleanWebpackPlugin()],
+  }
 };
