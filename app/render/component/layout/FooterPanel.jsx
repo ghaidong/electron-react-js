@@ -7,7 +7,7 @@ export default class FooterPanel extends Component {
         <div className="footer-panel">
           this is emop electron footer <br/>
           made by haidong <br />
-          @haidong <br />
+          sesa@haidong <br />
         </div>
       </div>
     )

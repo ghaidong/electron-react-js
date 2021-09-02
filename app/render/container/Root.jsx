@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import HeaderPanel from '../component/layout/HeaderPanel'
 import FooterPanel from '../component/layout/FooterPanel'
 import MainMenu from './menuLeft/MainMenu';
+import { Button } from 'antd';
+
 
 export default class Root extends Component {
   constructor (props) {
@@ -21,6 +23,7 @@ export default class Root extends Component {
             </div>
             <div className="flex-item-scroll ">
               content
+              {/* <Button key="3" type="primary">Operating</Button>, */}
             </div>
           </div>
         </div>

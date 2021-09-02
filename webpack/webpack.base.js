@@ -1,4 +1,5 @@
 const path = require('path');
+const overridesConfig = require('./config-overrides')
 
 //所有的基础配置项
 module.exports = {
@@ -21,14 +22,21 @@ module.exports = {
         },
       },
       {
-        test: /\.less$/i,
-        use: [
-          // compiles Less to CSS
-          "style-loader",
-          "css-loader",
-          "less-loader",
-        ],
-      },
-    ],
+        test: /\.less$/,
+        use: [{
+          loader: 'style-loader',
+        }, {
+          loader: 'css-loader', // translates CSS into CommonJS
+        }, {
+          loader: 'less-loader', // compiles Less to CSS
+          options: {
+            lessOptions: { // 如果使用less-loader@5，请移除 lessOptions 这一级直接配置选项。
+              modifyVars: overridesConfig,
+              javascriptEnabled: true,
+            },
+          },
+        }]
+      }
+    ]
   }
 };
